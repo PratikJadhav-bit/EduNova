@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="EduNova – The future of AI-powered smart education. Student management, AI analytics, attendance tracking, performance insights and more." />
+  <meta name="keywords" content="AI coaching, smart education, student management, performance analytics, EduNova" />
+  <title>EduNova – Future of Smart Education</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR NAV -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-icon"><span>E</span></div>
+      <div class="logo-text"><span class="logo-main">EduNova</span><span class="logo-sub">AI Institute</span></div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="nav-section-label">OVERVIEW</div>
+      <a href="#" class="nav-item active" data-page="dashboard" onclick="showPage('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="nav-item" data-page="students" onclick="showPage('students')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Students
+      </a>
+      <a href="#" class="nav-item" data-page="attendance" onclick="showPage('attendance')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        Attendance
+      </a>
+
+      <div class="nav-section-label">ACADEMICS</div>
+      <a href="#" class="nav-item" data-page="timetable" onclick="showPage('timetable')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Timetable
+      </a>
+      <a href="#" class="nav-item" data-page="assignments" onclick="showPage('assignments')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Assignments
+      </a>
+      <a href="#" class="nav-item" data-page="tests" onclick="showPage('tests')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Online Tests
+      </a>
+
+      <div class="nav-section-label">AI & ANALYTICS</div>
+      <a href="#" class="nav-item" data-page="analytics" onclick="showPage('analytics')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        AI Analytics
+      </a>
+      <a href="#" class="nav-item" data-page="recommendations" onclick="showPage('recommendations')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        AI Recommendations
+      </a>
+      <a href="#" class="nav-item" data-page="ranks" onclick="showPage('ranks')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Rank Predictor
+      </a>
+
+      <div class="nav-section-label">MANAGEMENT</div>
+      <a href="#" class="nav-item" data-page="fees" onclick="showPage('fees')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        Fee Tracking
+      </a>
+      <a href="#" class="nav-item" data-page="teachers" onclick="showPage('teachers')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Teachers
+      </a>
+      <a href="#" class="nav-item" data-page="parents" onclick="showPage('parents')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Parent Comms
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="ai-status">
+        <div class="ai-pulse"></div>
+        <span>AI Engine Active</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="hamburger" id="hamburgerBtn" onclick="toggleSidebar()">
+          <span></span><span></span><span></span>
+        </button>
+        <div class="page-breadcrumb">
+          <span class="breadcrumb-home">EduNova</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polyline points="9 18 15 12 9 6"/></svg>
+          <span class="breadcrumb-current" id="breadcrumbCurrent">Dashboard</span>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" placeholder="Search students, classes…" id="globalSearch" />
+        </div>
+        <button class="icon-btn" id="notifBtn" onclick="toggleNotifications()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+          <span class="notif-badge">4</span>
+        </button>
+        <div class="user-avatar" id="userAvatarBtn">
+          <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=admin&backgroundColor=4f46e5" alt="Admin" />
+          <div class="user-info">
+            <span class="user-name">Dr. Aryan Mehta</span>
+            <span class="user-role">Institute Director</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- NOTIFICATION PANEL -->
+    <div class="notification-panel" id="notifPanel">
+      <div class="notif-header">
+        <h3>Notifications</h3>
+        <span class="notif-count">4 New</span>
+      </div>
+      <div class="notif-list">
+        <div class="notif-item unread">
+          <div class="notif-icon ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="notif-body"><strong>AI Alert:</strong> Riya Sharma's performance dropped 12% this week.<span>2 min ago</span></div>
+        </div>
+        <div class="notif-item unread">
+          <div class="notif-icon fee"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <div class="notif-body"><strong>Fee Due:</strong> 3 students have pending fees for June.<span>15 min ago</span></div>
+        </div>
+        <div class="notif-item unread">
+          <div class="notif-icon attend"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg></div>
+          <div class="notif-body"><strong>Low Attendance:</strong> Batch B attendance below 75% threshold.<span>1 hr ago</span></div>
+        </div>
+        <div class="notif-item unread">
+          <div class="notif-icon msg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+          <div class="notif-body"><strong>Parent Message:</strong> Mrs. Kapoor requests a meeting about Arjun.<span>2 hr ago</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PAGES -->
+    <div class="pages-container">
+
+      <!-- ====== DASHBOARD PAGE ====== -->
+      <div class="page active" id="page-dashboard">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Good Evening, Dr. Mehta 👋</h1>
+            <p class="page-subtitle">Here's what's happening at EduNova today — powered by AI insights.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-secondary" onclick="showPage('analytics')">View Reports</button>
+            <button class="btn-primary" onclick="showPage('students')">Add Student</button>
+          </div>
+        </div>
+
+        <!-- KPI CARDS -->
+        <div class="kpi-grid">
+          <div class="kpi-card" style="--accent: #4f46e5;">
+            <div class="kpi-icon" style="background: linear-gradient(135deg,#4f46e5,#7c3aed);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" data-target="2847">0</div>
+              <div class="kpi-label">Total Students</div>
+              <div class="kpi-change positive">↑ 8.2% this month</div>
+            </div>
+            <div class="kpi-sparkline">
+              <svg viewBox="0 0 80 30" class="sparkline">
+                <polyline points="0,25 15,20 25,22 35,15 45,18 55,10 65,8 80,5" fill="none" stroke="#4f46e5" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="kpi-card" style="--accent: #059669;">
+            <div class="kpi-icon" style="background: linear-gradient(135deg,#059669,#10b981);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" data-target="87">0</div>
+              <div class="kpi-label">Avg. Attendance %</div>
+              <div class="kpi-change positive">↑ 2.1% vs last week</div>
+            </div>
+            <div class="kpi-sparkline">
+              <svg viewBox="0 0 80 30" class="sparkline">
+                <polyline points="0,20 15,18 25,22 35,16 45,14 55,12 65,13 80,10" fill="none" stroke="#059669" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="kpi-card" style="--accent: #d97706;">
+            <div class="kpi-icon" style="background: linear-gradient(135deg,#d97706,#f59e0b);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" data-target="94" data-prefix="₹" data-suffix="L">0</div>
+              <div class="kpi-label">Revenue (June)</div>
+              <div class="kpi-change positive">↑ 12.5% vs May</div>
+            </div>
+            <div class="kpi-sparkline">
+              <svg viewBox="0 0 80 30" class="sparkline">
+                <polyline points="0,28 15,24 25,20 35,18 45,15 55,12 65,9 80,6" fill="none" stroke="#d97706" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="kpi-card" style="--accent: #dc2626;">
+            <div class="kpi-icon" style="background: linear-gradient(135deg,#dc2626,#ef4444);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" data-target="76">0</div>
+              <div class="kpi-label">Avg. Score %</div>
+              <div class="kpi-change negative">↓ 1.4% this week</div>
+            </div>
+            <div class="kpi-sparkline">
+              <svg viewBox="0 0 80 30" class="sparkline">
+                <polyline points="0,10 15,12 25,8 35,14 45,16 55,14 65,18 80,20" fill="none" stroke="#dc2626" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="kpi-card" style="--accent: #7c3aed;">
+            <div class="kpi-icon" style="background: linear-gradient(135deg,#7c3aed,#a855f7);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" data-target="142">0</div>
+              <div class="kpi-label">Active Teachers</div>
+              <div class="kpi-change positive">↑ 3 new this month</div>
+            </div>
+            <div class="kpi-sparkline">
+              <svg viewBox="0 0 80 30" class="sparkline">
+                <polyline points="0,22 15,20 25,18 35,16 45,14 55,13 65,12 80,10" fill="none" stroke="#7c3aed" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="kpi-card" style="--accent: #0891b2;">
+            <div class="kpi-icon" style="background: linear-gradient(135deg,#0891b2,#06b6d4);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="kpi-body">
+              <div class="kpi-value" data-target="94">0</div>
+              <div class="kpi-label">AI Insights Generated</div>
+              <div class="kpi-change positive">↑ 24 today</div>
+            </div>
+            <div class="kpi-sparkline">
+              <svg viewBox="0 0 80 30" class="sparkline">
+                <polyline points="0,25 15,22 25,20 35,16 45,12 55,10 65,8 80,4" fill="none" stroke="#0891b2" stroke-width="2"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- DASHBOARD CHARTS ROW -->
+        <div class="charts-row">
+          <div class="glass-card chart-card" style="flex:2">
+            <div class="card-header">
+              <h3>Performance Trend</h3>
+              <div class="card-tabs">
+                <button class="tab active" onclick="setChartTab(this,'weekly')">Weekly</button>
+                <button class="tab" onclick="setChartTab(this,'monthly')">Monthly</button>
+                <button class="tab" onclick="setChartTab(this,'quarterly')">Quarterly</button>
+              </div>
+            </div>
+            <div class="chart-area" id="performanceChart">
+              <svg viewBox="0 0 700 200" class="line-chart" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="perfGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="attGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#059669" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <!-- Grid -->
+                <line x1="0" y1="40" x2="700" y2="40" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4"/>
+                <line x1="0" y1="80" x2="700" y2="80" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4"/>
+                <line x1="0" y1="120" x2="700" y2="120" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4"/>
+                <line x1="0" y1="160" x2="700" y2="160" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4"/>
+                <!-- Performance line -->
+                <path d="M0,160 C50,140 100,130 150,120 C200,110 250,100 300,90 C350,80 400,85 450,70 C500,55 550,50 600,40 C640,32 670,28 700,20" fill="none" stroke="#4f46e5" stroke-width="3" stroke-linecap="round"/>
+                <path d="M0,160 C50,140 100,130 150,120 C200,110 250,100 300,90 C350,80 400,85 450,70 C500,55 550,50 600,40 C640,32 670,28 700,20 L700,200 L0,200Z" fill="url(#perfGrad)"/>
+                <!-- Attendance line -->
+                <path d="M0,140 C50,135 100,125 150,130 C200,135 250,120 300,115 C350,110 400,100 450,95 C500,90 550,85 600,80 C640,76 670,72 700,65" fill="none" stroke="#059669" stroke-width="3" stroke-linecap="round" stroke-dasharray="6 3"/>
+                <!-- Labels -->
+                <text x="0" y="198" fill="#9ca3af" font-size="10" font-family="Inter">Mon</text>
+                <text x="100" y="198" fill="#9ca3af" font-size="10" font-family="Inter">Tue</text>
+                <text x="200" y="198" fill="#9ca3af" font-size="10" font-family="Inter">Wed</text>
+                <text x="300" y="198" fill="#9ca3af" font-size="10" font-family="Inter">Thu</text>
+                <text x="400" y="198" fill="#9ca3af" font-size="10" font-family="Inter">Fri</text>
+                <text x="500" y="198" fill="#9ca3af" font-size="10" font-family="Inter">Sat</text>
+                <text x="600" y="198" fill="#9ca3af" font-size="10" font-family="Inter">Sun</text>
+              </svg>
+              <div class="chart-legend">
+                <span><i style="background:#4f46e5"></i> Performance</span>
+                <span><i style="background:#059669"></i> Attendance</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card chart-card" style="flex:1">
+            <div class="card-header">
+              <h3>Subject Distribution</h3>
+            </div>
+            <div class="donut-chart-wrap">
+              <svg viewBox="0 0 160 160" width="160" height="160" class="donut-chart">
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#e5e7eb" stroke-width="20"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#4f46e5" stroke-width="20" stroke-dasharray="94.2 282.6" stroke-dashoffset="0" class="donut-seg"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#059669" stroke-width="20" stroke-dasharray="75.4 282.6" stroke-dashoffset="-94.2" class="donut-seg"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#f59e0b" stroke-width="20" stroke-dasharray="56.5 282.6" stroke-dashoffset="-169.6" class="donut-seg"/>
+                <circle cx="80" cy="80" r="60" fill="none" stroke="#06b6d4" stroke-width="20" stroke-dasharray="56.5 282.6" stroke-dashoffset="-226.1" class="donut-seg"/>
+                <text x="80" y="76" text-anchor="middle" font-family="Inter" font-size="18" font-weight="700" fill="#1e293b">2847</text>
+                <text x="80" y="92" text-anchor="middle" font-family="Inter" font-size="9" fill="#64748b">students</text>
+              </svg>
+              <div class="donut-legend">
+                <div class="donut-leg-item"><span style="background:#4f46e5"></span>Physics – 33%</div>
+                <div class="donut-leg-item"><span style="background:#059669"></span>Chemistry – 27%</div>
+                <div class="donut-leg-item"><span style="background:#f59e0b"></span>Maths – 20%</div>
+                <div class="donut-leg-item"><span style="background:#06b6d4"></span>Biology – 20%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERFORMANCE HEATMAP -->
+        <div class="glass-card heatmap-card">
+          <div class="card-header">
+            <h3>📊 Attendance Heatmap — June 2026</h3>
+            <div class="heatmap-legend">
+              <span style="--c:#e5e7eb">0–20%</span>
+              <span style="--c:#bfdbfe">21–40%</span>
+              <span style="--c:#93c5fd">41–60%</span>
+              <span style="--c:#3b82f6">61–80%</span>
+              <span style="--c:#1d4ed8">81–100%</span>
+            </div>
+          </div>
+          <div class="heatmap-grid" id="heatmapGrid"></div>
+        </div>
+
+        <!-- BOTTOM ROW -->
+        <div class="bottom-row">
+          <!-- AI Assistant -->
+          <div class="glass-card ai-assistant-card">
+            <div class="card-header">
+              <h3>🤖 AI Academic Assistant</h3>
+              <span class="ai-badge">GPT-4 Powered</span>
+            </div>
+            <div class="ai-chat" id="aiChat">
+              <div class="chat-msg ai">
+                <div class="chat-avatar ai-av">AI</div>
+                <div class="chat-bubble">Hello Dr. Mehta! I've analyzed today's data. <strong>Batch A</strong> is performing exceptionally well. I recommend focusing attention on <strong>Batch C Chemistry</strong> — 8 students show declining trends. Shall I generate a personalized study plan?</div>
+              </div>
+              <div class="chat-msg user">
+                <div class="chat-bubble">Yes, generate study plans for at-risk students.</div>
+                <div class="chat-avatar user-av">DM</div>
+              </div>
+              <div class="chat-msg ai">
+                <div class="chat-avatar ai-av">AI</div>
+                <div class="chat-bubble">✅ Generated <strong>8 personalized study plans</strong> based on each student's learning style, weak topics, and available time. Plans are now visible in student profiles. I've also scheduled revision sessions in the smart timetable.</div>
+              </div>
+            </div>
+            <div class="ai-input-row">
+              <input type="text" placeholder="Ask AI about student performance, schedules…" id="aiInput" onkeypress="handleAIInput(event)" />
+              <button class="ai-send-btn" onclick="sendAIMessage()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Recent Activity -->
+          <div class="glass-card activity-card">
+            <div class="card-header">
+              <h3>Recent Activity</h3>
+              <a href="#" class="view-all">View All</a>
+            </div>
+            <div class="activity-list">
+              <div class="activity-item">
+                <div class="act-icon" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+                <div class="act-body">
+                  <strong>New Student Enrolled</strong>
+                  <p>Arjun Kapoor — JEE Batch A</p>
+                </div>
+                <span class="act-time">2m ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="act-icon" style="background:linear-gradient(135deg,#059669,#10b981)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 11 12 14 22 4"/></svg></div>
+                <div class="act-body">
+                  <strong>Attendance Marked</strong>
+                  <p>NEET Batch B — 34/36 present</p>
+                </div>
+                <span class="act-time">15m ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="act-icon" style="background:linear-gradient(135deg,#d97706,#f59e0b)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                <div class="act-body">
+                  <strong>Fee Collected</strong>
+                  <p>₹18,500 from Riya Sharma</p>
+                </div>
+                <span class="act-time">1h ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="act-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg></div>
+                <div class="act-body">
+                  <strong>Test Results Published</strong>
+                  <p>Physics Mock — Avg 74.2%</p>
+                </div>
+                <span class="act-time">2h ago</span>
+              </div>
+              <div class="activity-item">
+                <div class="act-icon" style="background:linear-gradient(135deg,#7c3aed,#a855f7)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+                <div class="act-body">
+                  <strong>AI Insight Generated</strong>
+                  <p>Rank prediction updated for 45 students</p>
+                </div>
+                <span class="act-time">3h ago</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Top Students -->
+          <div class="glass-card top-students-card">
+            <div class="card-header">
+              <h3>🏆 Top Performers</h3>
+              <a href="#" class="view-all">Leaderboard</a>
+            </div>
+            <div class="top-students-list">
+              <div class="top-student rank-1">
+                <div class="rank-badge">1</div>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=priya&backgroundColor=fef3c7" alt="Priya" class="student-avatar" />
+                <div class="student-info">
+                  <strong>Priya Agarwal</strong>
+                  <p>JEE Batch A • 98.4%</p>
+                </div>
+                <div class="student-score" style="color:#059669">98.4</div>
+              </div>
+              <div class="top-student rank-2">
+                <div class="rank-badge">2</div>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=rahul&backgroundColor=ede9fe" alt="Rahul" class="student-avatar" />
+                <div class="student-info">
+                  <strong>Rahul Verma</strong>
+                  <p>NEET Batch A • 97.1%</p>
+                </div>
+                <div class="student-score" style="color:#4f46e5">97.1</div>
+              </div>
+              <div class="top-student rank-3">
+                <div class="rank-badge">3</div>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=ananya&backgroundColor=dbeafe" alt="Ananya" class="student-avatar" />
+                <div class="student-info">
+                  <strong>Ananya Singh</strong>
+                  <p>JEE Batch B • 96.8%</p>
+                </div>
+                <div class="student-score" style="color:#0891b2">96.8</div>
+              </div>
+              <div class="top-student">
+                <div class="rank-badge">4</div>
+                <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=karan&backgroundColor=dcfce7" alt="Karan" class="student-avatar" />
+                <div class="student-info">
+                  <strong>Karan Malhotra</strong>
+                  <p>JEE Batch A • 95.5%</p>
+                </div>
+                <div class="student-score" style="color:#d97706">95.5</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== STUDENTS PAGE ====== -->
+      <div class="page" id="page-students">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Student Management</h1>
+            <p class="page-subtitle">Manage all enrolled students with AI-powered insights.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-secondary" id="filterBtn">Filter</button>
+            <button class="btn-primary" onclick="openStudentModal()">+ Add Student</button>
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <input type="text" placeholder="Search by name, roll no, batch…" class="filter-input" id="studentSearch" oninput="filterStudents()" />
+          <select class="filter-select" id="batchFilter" onchange="filterStudents()">
+            <option value="">All Batches</option>
+            <option>JEE Batch A</option>
+            <option>JEE Batch B</option>
+            <option>NEET Batch A</option>
+            <option>NEET Batch B</option>
+          </select>
+          <select class="filter-select" id="statusFilter" onchange="filterStudents()">
+            <option value="">All Status</option>
+            <option>Active</option>
+            <option>Inactive</option>
+            <option>At Risk</option>
+          </select>
+        </div>
+
+        <div class="students-table-wrap glass-card">
+          <table class="data-table" id="studentsTable">
+            <thead>
+              <tr>
+                <th>Student</th>
+                <th>Roll No.</th>
+                <th>Batch</th>
+                <th>Attendance</th>
+                <th>Avg. Score</th>
+                <th>AI Status</th>
+                <th>Fee</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="studentsTableBody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ====== ATTENDANCE PAGE ====== -->
+      <div class="page" id="page-attendance">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Attendance Tracking</h1>
+            <p class="page-subtitle">Real-time attendance monitoring with smart alerts.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-secondary">Export Report</button>
+            <button class="btn-primary" onclick="markAllPresent()">Mark Today's Attendance</button>
+          </div>
+        </div>
+
+        <div class="attend-stats">
+          <div class="glass-card attend-stat-card">
+            <div class="attend-stat-val" style="color:#059669">94.2%</div>
+            <div class="attend-stat-label">JEE Batch A Today</div>
+          </div>
+          <div class="glass-card attend-stat-card">
+            <div class="attend-stat-val" style="color:#f59e0b">78.4%</div>
+            <div class="attend-stat-label">JEE Batch B Today</div>
+          </div>
+          <div class="glass-card attend-stat-card">
+            <div class="attend-stat-val" style="color:#059669">91.7%</div>
+            <div class="attend-stat-label">NEET Batch A Today</div>
+          </div>
+          <div class="glass-card attend-stat-card">
+            <div class="attend-stat-val" style="color:#dc2626">68.9%</div>
+            <div class="attend-stat-label">NEET Batch B Today</div>
+          </div>
+        </div>
+
+        <div class="attend-main glass-card">
+          <div class="card-header">
+            <h3>Mark Attendance — JEE Batch A | May 26, 2026</h3>
+            <div class="attend-actions">
+              <button class="btn-ghost" onclick="selectAll()">Select All</button>
+              <button class="btn-primary btn-sm" onclick="saveAttendance()">Save Attendance</button>
+            </div>
+          </div>
+          <div class="attendance-grid" id="attendanceGrid"></div>
+        </div>
+
+        <div class="glass-card" style="margin-top:20px">
+          <div class="card-header"><h3>Absentee Alert List</h3><span class="badge-alert">3 Students</span></div>
+          <div class="absentee-list" id="absenteeList">
+            <div class="absentee-item">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=rohan&backgroundColor=fee2e2" class="student-avatar" />
+              <div><strong>Rohan Gupta</strong><p>Absent 4 consecutive days • Parent notified</p></div>
+              <button class="btn-ghost btn-sm" onclick="notifyParent('Rohan')">Notify Parent</button>
+            </div>
+            <div class="absentee-item">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=sneha&backgroundColor=fee2e2" class="student-avatar" />
+              <div><strong>Sneha Patel</strong><p>Attendance: 62% — Below threshold</p></div>
+              <button class="btn-ghost btn-sm" onclick="notifyParent('Sneha')">Notify Parent</button>
+            </div>
+            <div class="absentee-item">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=vivek&backgroundColor=fee2e2" class="student-avatar" />
+              <div><strong>Vivek Sharma</strong><p>Medical leave — 3 days remaining</p></div>
+              <button class="btn-ghost btn-sm" onclick="notifyParent('Vivek')">Notify Parent</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== TIMETABLE PAGE ====== -->
+      <div class="page" id="page-timetable">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Smart Timetable</h1>
+            <p class="page-subtitle">AI-optimized class scheduling for maximum learning efficiency.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-secondary">Export PDF</button>
+            <button class="btn-primary" onclick="regenerateTimetable()">🤖 AI Regenerate</button>
+          </div>
+        </div>
+
+        <div class="glass-card timetable-card">
+          <div class="timetable-header">
+            <div class="tt-nav">
+              <button onclick="prevWeek()">‹</button>
+              <span id="ttWeekLabel">Week of May 26 – Jun 1, 2026</span>
+              <button onclick="nextWeek()">›</button>
+            </div>
+            <div class="batch-selector">
+              <button class="tab active" onclick="selectBatch(this,'JEE A')">JEE Batch A</button>
+              <button class="tab" onclick="selectBatch(this,'JEE B')">JEE Batch B</button>
+              <button class="tab" onclick="selectBatch(this,'NEET A')">NEET Batch A</button>
+            </div>
+          </div>
+          <div class="timetable-grid" id="timetableGrid"></div>
+        </div>
+      </div>
+
+      <!-- ====== ASSIGNMENTS PAGE ====== -->
+      <div class="page" id="page-assignments">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Assignment Tracking</h1>
+            <p class="page-subtitle">Monitor submissions, deadlines, and AI grading.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-primary" onclick="openAssignmentModal()">+ New Assignment</button>
+          </div>
+        </div>
+
+        <div class="assignments-grid" id="assignmentsGrid"></div>
+      </div>
+
+      <!-- ====== ONLINE TESTS PAGE ====== -->
+      <div class="page" id="page-tests">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Online Test System</h1>
+            <p class="page-subtitle">Create, manage, and analyze AI-graded tests.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-primary" onclick="openTestModal()">+ Create Test</button>
+          </div>
+        </div>
+
+        <div class="tests-overview">
+          <div class="glass-card test-stat-card">
+            <div class="test-stat-icon" style="background:linear-gradient(135deg,#4f46e5,#7c3aed)">📝</div>
+            <div class="test-stat-val">28</div>
+            <div class="test-stat-label">Tests This Month</div>
+          </div>
+          <div class="glass-card test-stat-card">
+            <div class="test-stat-icon" style="background:linear-gradient(135deg,#059669,#10b981)">✅</div>
+            <div class="test-stat-val">2,341</div>
+            <div class="test-stat-label">Submissions</div>
+          </div>
+          <div class="glass-card test-stat-card">
+            <div class="test-stat-icon" style="background:linear-gradient(135deg,#d97706,#f59e0b)">📊</div>
+            <div class="test-stat-val">74.2%</div>
+            <div class="test-stat-label">Avg. Score</div>
+          </div>
+          <div class="glass-card test-stat-card">
+            <div class="test-stat-icon" style="background:linear-gradient(135deg,#dc2626,#ef4444)">⚡</div>
+            <div class="test-stat-val">3</div>
+            <div class="test-stat-label">Live Now</div>
+          </div>
+        </div>
+
+        <div class="tests-table-wrap glass-card">
+          <div class="card-header"><h3>Test Schedule & Results</h3></div>
+          <table class="data-table" id="testsTable">
+            <thead>
+              <tr>
+                <th>Test Name</th>
+                <th>Batch</th>
+                <th>Date</th>
+                <th>Duration</th>
+                <th>Students</th>
+                <th>Avg Score</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="testsTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ====== AI ANALYTICS PAGE ====== -->
+      <div class="page" id="page-analytics">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">AI Performance Analytics</h1>
+            <p class="page-subtitle">Deep AI-driven insights into student and teacher performance.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-secondary">Download Report</button>
+          </div>
+        </div>
+
+        <div class="analytics-grid">
+          <div class="glass-card analytics-chart-card" style="grid-column:span 2">
+            <div class="card-header"><h3>Subject-wise Score Distribution (All Batches)</h3></div>
+            <div class="bar-chart-wrap">
+              <div class="bar-chart" id="subjectBarChart">
+                <div class="bar-group">
+                  <div class="bars">
+                    <div class="bar" style="height:78%;background:linear-gradient(to top,#4f46e5,#818cf8)" title="Physics JEE: 78%"><span>78</span></div>
+                    <div class="bar" style="height:65%;background:linear-gradient(to top,#059669,#34d399)" title="Physics NEET: 65%"><span>65</span></div>
+                  </div>
+                  <div class="bar-label">Physics</div>
+                </div>
+                <div class="bar-group">
+                  <div class="bars">
+                    <div class="bar" style="height:82%;background:linear-gradient(to top,#4f46e5,#818cf8)"><span>82</span></div>
+                    <div class="bar" style="height:71%;background:linear-gradient(to top,#059669,#34d399)"><span>71</span></div>
+                  </div>
+                  <div class="bar-label">Chemistry</div>
+                </div>
+                <div class="bar-group">
+                  <div class="bars">
+                    <div class="bar" style="height:74%;background:linear-gradient(to top,#4f46e5,#818cf8)"><span>74</span></div>
+                    <div class="bar" style="height:60%;background:linear-gradient(to top,#059669,#34d399)"><span>60</span></div>
+                  </div>
+                  <div class="bar-label">Maths</div>
+                </div>
+                <div class="bar-group">
+                  <div class="bars">
+                    <div class="bar" style="height:0%;background:transparent" title="n/a"></div>
+                    <div class="bar" style="height:76%;background:linear-gradient(to top,#059669,#34d399)"><span>76</span></div>
+                  </div>
+                  <div class="bar-label">Biology</div>
+                </div>
+                <div class="bar-group">
+                  <div class="bars">
+                    <div class="bar" style="height:89%;background:linear-gradient(to top,#4f46e5,#818cf8)"><span>89</span></div>
+                    <div class="bar" style="height:81%;background:linear-gradient(to top,#059669,#34d399)"><span>81</span></div>
+                  </div>
+                  <div class="bar-label">Overall</div>
+                </div>
+              </div>
+              <div class="chart-legend" style="margin-top:16px">
+                <span><i style="background:#4f46e5"></i> JEE Batches</span>
+                <span><i style="background:#059669"></i> NEET Batches</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card analytics-chart-card">
+            <div class="card-header"><h3>Student Risk Analysis</h3></div>
+            <div class="risk-analysis">
+              <div class="risk-item">
+                <div class="risk-label"><span class="risk-dot" style="background:#dc2626"></span>High Risk</div>
+                <div class="risk-bar-wrap"><div class="risk-bar" style="width:8%;background:#dc2626"></div><span>8%</span></div>
+              </div>
+              <div class="risk-item">
+                <div class="risk-label"><span class="risk-dot" style="background:#f59e0b"></span>At Risk</div>
+                <div class="risk-bar-wrap"><div class="risk-bar" style="width:17%;background:#f59e0b"></div><span>17%</span></div>
+              </div>
+              <div class="risk-item">
+                <div class="risk-label"><span class="risk-dot" style="background:#059669"></span>On Track</div>
+                <div class="risk-bar-wrap"><div class="risk-bar" style="width:58%;background:#059669"></div><span>58%</span></div>
+              </div>
+              <div class="risk-item">
+                <div class="risk-label"><span class="risk-dot" style="background:#4f46e5"></span>Excelling</div>
+                <div class="risk-bar-wrap"><div class="risk-bar" style="width:17%;background:#4f46e5"></div><span>17%</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="glass-card analytics-chart-card" style="grid-column:span 3">
+            <div class="card-header"><h3>🔥 Performance Heatmap by Topic</h3></div>
+            <div class="topic-heatmap" id="topicHeatmap"></div>
+          </div>
+
+          <div class="glass-card analytics-chart-card">
+            <div class="card-header"><h3>Teacher Performance Index</h3></div>
+            <div class="teacher-perf-list" id="teacherPerfList"></div>
+          </div>
+
+          <div class="glass-card analytics-chart-card">
+            <div class="card-header"><h3>Monthly Trend</h3></div>
+            <div class="monthly-trend" id="monthlyTrend">
+              <svg viewBox="0 0 300 150" width="100%" style="overflow:visible">
+                <defs>
+                  <linearGradient id="trendGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.3"/>
+                    <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <line x1="0" y1="30" x2="300" y2="30" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="0" y1="60" x2="300" y2="60" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="0" y1="90" x2="300" y2="90" stroke="#f1f5f9" stroke-width="1"/>
+                <line x1="0" y1="120" x2="300" y2="120" stroke="#f1f5f9" stroke-width="1"/>
+                <path d="M0,120 C30,110 60,100 90,80 C120,60 150,70 180,55 C210,40 240,35 270,20 L300,15" fill="none" stroke="#4f46e5" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M0,120 C30,110 60,100 90,80 C120,60 150,70 180,55 C210,40 240,35 270,20 L300,15 L300,150 L0,150Z" fill="url(#trendGrad)"/>
+                <text x="0" y="145" fill="#9ca3af" font-size="8" font-family="Inter">Jan</text>
+                <text x="42" y="145" fill="#9ca3af" font-size="8" font-family="Inter">Feb</text>
+                <text x="84" y="145" fill="#9ca3af" font-size="8" font-family="Inter">Mar</text>
+                <text x="126" y="145" fill="#9ca3af" font-size="8" font-family="Inter">Apr</text>
+                <text x="168" y="145" fill="#9ca3af" font-size="8" font-family="Inter">May</text>
+                <text x="210" y="145" fill="#9ca3af" font-size="8" font-family="Inter">Jun</text>
+                <text x="252" y="145" fill="#9ca3af" font-size="8" font-family="Inter">Jul</text>
+                <text x="288" y="145" fill="#9ca3af" font-size="8" font-family="Inter">Aug</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== AI RECOMMENDATIONS PAGE ====== -->
+      <div class="page" id="page-recommendations">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">AI Study Recommendations</h1>
+            <p class="page-subtitle">Personalized learning paths powered by machine learning.</p>
+          </div>
+        </div>
+        <div class="recommendations-grid" id="recommendationsGrid"></div>
+      </div>
+
+      <!-- ====== RANK PREDICTOR PAGE ====== -->
+      <div class="page" id="page-ranks">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Rank Prediction Analytics</h1>
+            <p class="page-subtitle">AI-powered JEE & NEET rank forecasting based on performance data.</p>
+          </div>
+        </div>
+
+        <div class="rank-predictor-wrap">
+          <div class="glass-card rank-input-card">
+            <h3>🎯 Predict Student Rank</h3>
+            <div class="rank-form">
+              <div class="form-group">
+                <label>Select Student</label>
+                <select class="form-control" id="rankStudent">
+                  <option>Priya Agarwal</option>
+                  <option>Rahul Verma</option>
+                  <option>Ananya Singh</option>
+                  <option>Karan Malhotra</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Exam</label>
+                <select class="form-control" id="rankExam">
+                  <option>JEE Main 2026</option>
+                  <option>JEE Advanced 2026</option>
+                  <option>NEET 2026</option>
+                </select>
+              </div>
+              <div class="score-inputs">
+                <div class="form-group">
+                  <label>Physics Score</label>
+                  <input type="number" class="form-control" value="87" id="physScore" />
+                </div>
+                <div class="form-group">
+                  <label>Chemistry Score</label>
+                  <input type="number" class="form-control" value="91" id="chemScore" />
+                </div>
+                <div class="form-group">
+                  <label>Maths Score</label>
+                  <input type="number" class="form-control" value="84" id="mathScore" />
+                </div>
+              </div>
+              <button class="btn-primary" style="width:100%" onclick="predictRank()">🤖 Predict Rank</button>
+            </div>
+          </div>
+
+          <div class="glass-card rank-result-card" id="rankResult">
+            <div class="rank-result-placeholder">
+              <div class="rank-placeholder-icon">🎯</div>
+              <p>Fill in the details and click <strong>Predict Rank</strong> to see AI prediction</p>
+            </div>
+          </div>
+
+          <div class="glass-card rank-table-card">
+            <div class="card-header"><h3>Top Students — Predicted Ranks</h3></div>
+            <div class="rank-table-wrap">
+              <table class="data-table" id="rankTable">
+                <thead>
+                  <tr><th>Rank</th><th>Student</th><th>Batch</th><th>Predicted Score</th><th>Predicted Rank</th><th>Confidence</th></tr>
+                </thead>
+                <tbody id="rankTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ====== FEES PAGE ====== -->
+      <div class="page" id="page-fees">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Fee Tracking</h1>
+            <p class="page-subtitle">Manage student fees, invoices, and payment history.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-primary" onclick="openFeeModal()">+ Record Payment</button>
+          </div>
+        </div>
+
+        <div class="fees-overview">
+          <div class="glass-card fee-stat-card">
+            <div class="fee-label">Total Collected</div>
+            <div class="fee-val" style="color:#059669">₹94,50,000</div>
+            <div class="fee-sub">June 2026</div>
+          </div>
+          <div class="glass-card fee-stat-card">
+            <div class="fee-label">Pending</div>
+            <div class="fee-val" style="color:#dc2626">₹8,75,000</div>
+            <div class="fee-sub">47 students</div>
+          </div>
+          <div class="glass-card fee-stat-card">
+            <div class="fee-label">Overdue</div>
+            <div class="fee-val" style="color:#f59e0b">₹2,10,000</div>
+            <div class="fee-sub">12 students</div>
+          </div>
+          <div class="glass-card fee-stat-card">
+            <div class="fee-label">Scholarships</div>
+            <div class="fee-val" style="color:#4f46e5">₹4,20,000</div>
+            <div class="fee-sub">18 students</div>
+          </div>
+        </div>
+
+        <div class="glass-card fees-table-wrap">
+          <div class="card-header"><h3>Recent Transactions</h3><button class="btn-ghost btn-sm">Export CSV</button></div>
+          <table class="data-table" id="feesTable">
+            <thead>
+              <tr><th>Student</th><th>Batch</th><th>Amount</th><th>Type</th><th>Date</th><th>Status</th><th>Receipt</th></tr>
+            </thead>
+            <tbody id="feesTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ====== TEACHERS PAGE ====== -->
+      <div class="page" id="page-teachers">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Teacher Performance Insights</h1>
+            <p class="page-subtitle">AI-driven faculty analytics and performance evaluation.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-primary" onclick="openTeacherModal()">+ Add Teacher</button>
+          </div>
+        </div>
+        <div class="teachers-grid" id="teachersGrid"></div>
+      </div>
+
+      <!-- ====== PARENTS PAGE ====== -->
+      <div class="page" id="page-parents">
+        <div class="page-header">
+          <div>
+            <h1 class="page-title">Parent Communication</h1>
+            <p class="page-subtitle">Smart messaging and progress reporting for parents.</p>
+          </div>
+          <div class="page-actions">
+            <button class="btn-primary" onclick="sendBulkMessage()">📢 Bulk Message</button>
+          </div>
+        </div>
+
+        <div class="parents-layout">
+          <div class="glass-card parents-list-card">
+            <div class="card-header"><h3>Parent Inbox</h3><span class="badge-alert">7 Unread</span></div>
+            <div class="parents-list" id="parentsList"></div>
+          </div>
+
+          <div class="glass-card parent-chat-card" id="parentChatCard">
+            <div class="parent-chat-header">
+              <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=parentmrs&backgroundColor=fef3c7" class="student-avatar" />
+              <div>
+                <strong>Mrs. Sunita Kapoor</strong>
+                <p>Parent of Arjun Kapoor • JEE Batch A</p>
+              </div>
+              <span class="online-dot"></span>
+            </div>
+            <div class="parent-chat-messages" id="parentChatMessages">
+              <div class="chat-msg ai">
+                <div class="chat-bubble">Good morning Dr. Mehta, I wanted to discuss Arjun's recent performance. His scores seem to have dropped.</div>
+              </div>
+              <div class="chat-msg user">
+                <div class="chat-bubble">Good morning Mrs. Kapoor! I understand your concern. Arjun scored 74% in the latest mock test, which is a slight dip from 82%. Our AI has already generated a personalized study plan for him.</div>
+              </div>
+              <div class="chat-msg ai">
+                <div class="chat-bubble">Thank you for the prompt response! Can we schedule a meeting this week?</div>
+              </div>
+              <div class="chat-msg user">
+                <div class="chat-bubble">Absolutely! I'll schedule a meeting for Thursday at 5 PM. I'll also share Arjun's detailed AI performance report with you.</div>
+              </div>
+            </div>
+            <div class="ai-input-row">
+              <input type="text" placeholder="Type a message to parent…" id="parentMsgInput" onkeypress="handleParentMsg(event)" />
+              <button class="ai-send-btn" onclick="sendParentMsg()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end pages-container -->
+  </main>
+
+  <!-- MODALS -->
+  <div class="modal-overlay" id="studentModal">
+    <div class="modal glass-card">
+      <div class="modal-header">
+        <h3>Add New Student</h3>
+        <button class="modal-close" onclick="closeModal('studentModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group"><label>Full Name</label><input type="text" class="form-control" placeholder="Enter student name" id="newStudentName"/></div>
+          <div class="form-group"><label>Roll Number</label><input type="text" class="form-control" placeholder="e.g. JEE-2026-001" /></div>
+          <div class="form-group"><label>Batch</label>
+            <select class="form-control">
+              <option>JEE Batch A</option><option>JEE Batch B</option><option>NEET Batch A</option><option>NEET Batch B</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Phone</label><input type="text" class="form-control" placeholder="+91 XXXXX XXXXX" /></div>
+          <div class="form-group"><label>Email</label><input type="email" class="form-control" placeholder="student@email.com" /></div>
+          <div class="form-group"><label>Parent Phone</label><input type="text" class="form-control" placeholder="+91 XXXXX XXXXX" /></div>
+          <div class="form-group" style="grid-column:span 2"><label>Address</label><input type="text" class="form-control" placeholder="Enter full address" /></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('studentModal')">Cancel</button>
+        <button class="btn-primary" onclick="addStudent()">Add Student</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="assignmentModal">
+    <div class="modal glass-card">
+      <div class="modal-header">
+        <h3>Create New Assignment</h3>
+        <button class="modal-close" onclick="closeModal('assignmentModal')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group"><label>Title</label><input type="text" class="form-control" placeholder="Assignment title" /></div>
+          <div class="form-group"><label>Subject</label>
+            <select class="form-control"><option>Physics</option><option>Chemistry</option><option>Maths</option><option>Biology</option></select>
+          </div>
+          <div class="form-group"><label>Batch</label>
+            <select class="form-control"><option>JEE Batch A</option><option>JEE Batch B</option><option>NEET Batch A</option></select>
+          </div>
+          <div class="form-group"><label>Due Date</label><input type="date" class="form-control" /></div>
+          <div class="form-group" style="grid-column:span 2"><label>Description</label><textarea class="form-control" rows="3" placeholder="Assignment description…"></textarea></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" onclick="closeModal('assignmentModal')">Cancel</button>
+        <button class="btn-primary">Create Assignment</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="toastContainer" style="display:none;pointer-events:none;background:transparent">
+    <div class="toast" id="toast"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
